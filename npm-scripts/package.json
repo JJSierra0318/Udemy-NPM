@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "prestart": "node ./src/prestart.js",
-    "start": "node ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/index.js",
+    "custom1": "echo \"That's a custom script\"",
+    "custom2": "node ./src/customScript.js",
+    "all": "npm-run-all --parallel start custom1 custom2"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "npm-run-all": "^4.1.5"
   }
 }
